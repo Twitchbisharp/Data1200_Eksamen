@@ -3,6 +3,9 @@
 /*
 Check for overflow vha background-color og ikke border
 
+// div class="(content-type)" gir flere muligheter
+// Hvis sidene skal ha forskjellige body's... rename "mainBody" til "(page)body" eller...
+    så lager du en ny div/content som overskrider mainBody osv.
 
 */
 
