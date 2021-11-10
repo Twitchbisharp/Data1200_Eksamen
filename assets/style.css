@@ -21,7 +21,7 @@ ul{
 
 li{
     font-size: 20px;
-    display: inline;
+    display: inline-block;
 
 }
 
@@ -44,7 +44,86 @@ li a:hover{
 
 /* Index Page Content START //////////////////////*/
 
+h1{
+    text-align: center;
+}
 
+.mainBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.mainIntro{
+    order: 1;
+    width: 100%;
+    padding: 2.5% 25%;
+    text-align: center;
+}
+
+h2 a{
+    text-decoration: none;
+    color: white;
+}
+
+h2{
+    text-align: center;
+    
+}
+p{
+    text-align: center;
+}
+
+.mainRef{
+    display: flex;
+    order: 2;
+    width: 100%;
+}
+
+.mainAcc{
+    display: flex;
+    order: 3;
+    width: 100%;
+}
+
+.mainAcc > .mainImg{ /*Order Change*/
+    order: 2;
+}
+
+.mainTopic{
+    display: flex;
+    order: 4;
+    width: 100%;
+}
+
+.mainFun{
+    display: flex;
+    order: 5;
+    width: 100%;
+}
+
+.mainFun > .mainImg{ /*Order Change*/
+    order: 2;
+}
+
+.mainImg{
+    width: 50%;
+}
+
+.mainImg > img{
+    width: 100%;
+    background-color: yellow;
+}
+
+.mainContent{
+    width: 50%;
+    background-color: red;
+}
+
+.footer{
+
+}
 
 
 /* Index Page Content END //////////////////////*/
