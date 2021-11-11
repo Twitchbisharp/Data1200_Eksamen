@@ -122,16 +122,31 @@ p{
 }
 
 .footer{
-
+    color: white;
 }
-
 
 /* Index Page Content END //////////////////////*/
 
-
-
-
 /* Reflection Page Content START //////////////////////*/
+
+.refBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.refImg1{
+    order: 1;
+}
+
+.refImg2{
+    order: 3;
+}
+
+.refContent{
+    order: 2;
+    width: 100%;
+}
 
 /* Reflection Page Content END //////////////////////*/
 
