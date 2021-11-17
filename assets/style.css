@@ -11,31 +11,36 @@ Check for overflow vha background-color og ikke border
 
 /* NAV BAR START //////////////////////*/
 
+/* Hvis vi vil ha sticky nav-bar
+.nav {
+    position: sticky;
+    top:0;
+} */
+
+
 ul{
     list-style-type: none;
     margin: 0;
-    padding: 20px;
-    background-color: lightgray;
+    padding: 32px;
+    background-color: #FFE9CE;
     text-align: center;
 }
 
 li{
     font-size: 20px;
     display: inline-block;
-
 }
 
 li a{
     color: white;
-    padding: 20px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 12px;
-    background-color: gray;
+    background-color: #FFBE86;
     text-decoration: none;
 }
 
 li a:hover{
-    background-color: aqua;
+    background-color: #ffa352;
 }
 
 
@@ -45,21 +50,39 @@ li a:hover{
 /* Index Page Content START //////////////////////*/
 
 h1{
+    margin-left: 5%;
     text-align: center;
+    font-size: 100px;
+    color: white;
+    text-shadow: 0px 0px 6px black;
+}
+
+.header {
+    background-image: url("header_image_student.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .mainBody{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    background-color: #FFB5C2;
 
+    margin: 0 10% 0 10%;
+    justify-content: center;
+    
 }
 
 .mainIntro{
     order: 1;
     width: 100%;
-    padding: 2.5% 25%;
-    text-align: center;
+    padding: 2.5% 2.5%;
 }
 
 h2 a{
@@ -69,10 +92,28 @@ h2 a{
 
 h2{
     text-align: center;
-    
+    font-size: 50px;
+    text-shadow: 0px 0px 5px black;
 }
 p{
+    max-width: 70ch;
+    font-size: 30px;
+    margin: auto;
+    padding: 0 5% 0 5%;
     text-align: center;
+}
+
+#ToTheTop {
+    position: sticky;
+    top: 100%;
+    max-width: none;
+    margin: 0 10% 0 10%;
+    background-color: lightgray;
+
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
 .mainRef{
@@ -80,6 +121,7 @@ p{
     order: 2;
     width: 100%;
 }
+
 
 .mainAcc{
     display: flex;
@@ -114,11 +156,12 @@ p{
 .mainImg > img{
     width: 100%;
     background-color: yellow;
+    height: 100%;
 }
 
 .mainContent{
     width: 50%;
-    background-color: red;
+    background-color: #7e92ff;
 }
 
 .footer{
