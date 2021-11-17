@@ -9,45 +9,32 @@ Check for overflow vha background-color og ikke border
 
 */
 
-/* NAV BAR START //////////////////////*/
-
-/* Hvis vi vil ha sticky nav-bar
-.nav {
-    position: sticky;
-    top:0;
-} */
-
-
-ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 32px;
-    background-color: #FFE9CE;
-    text-align: center;
-}
-
-li{
-    font-size: 20px;
-    display: inline-block;
-}
-
-li a{
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
+.footer{
     background-color: #FFBE86;
-    text-decoration: none;
+    margin: 0 10%;
 }
 
-li a:hover{
-    background-color: #ffa352;
+/* UNIVERSAL CONTENT DESIGN //////////////////////*/
+html {
+    /*for the memes*/
+    padding: 0px;
+    margin: 0px;
+}
+main{
+    padding: 0px;
+    margin: 0px;
+    
 }
 
 
-/* NAV BAR END //////////////////////*/
-
-
-/* Index Page Content START //////////////////////*/
+body{
+    font-family: Helvetica;
+    background-image: url("header_image_student.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: #fcdc64;
+    max-width: 100%;
+}
 
 h1{
     margin-left: 5%;
@@ -55,34 +42,6 @@ h1{
     font-size: 100px;
     color: white;
     text-shadow: 0px 0px 6px black;
-}
-
-.header {
-    background-image: url("header_image_student.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 40vh;
-
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.mainBody{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #FFB5C2;
-
-    margin: 0 10% 0 10%;
-    justify-content: center;
-    
-}
-
-.mainIntro{
-    order: 1;
-    width: 100%;
-    padding: 2.5% 2.5%;
 }
 
 h2 a{
@@ -94,8 +53,102 @@ h2{
     text-align: center;
     font-size: 50px;
     text-shadow: 0px 0px 5px black;
+    color: white;
 }
-p{
+.images {
+    display: flex;
+    justify-content: center;
+}
+img {
+    width: 70%;
+}
+
+
+/* UNIVERSAL CONTENT DESIGN//////////////////////*/
+
+
+/* NAV BAR START //////////////////////*/
+
+
+.nav {
+    position: sticky;
+    top:0;
+} 
+
+
+ul{
+    list-style-type: none;
+    margin: 0.2% 10% 0;
+    padding: 32px 0px;
+    background-color: #FFE9CE;
+    text-align: center;
+    border-radius: 20px;
+}
+
+li{
+    font-size: 30px;
+    display: inline-block;
+    
+}
+
+li a{
+    color: black;
+    padding: 1em;
+    
+    border-radius: 20px;
+    background-color: #FFBE86;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #ffa352;
+    color: white;
+}
+
+/* NAV BAR END //////////////////////*/
+
+
+/* Index Page Content START //////////////////////*/
+
+.header {
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+
+.mainBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    
+
+    
+    justify-content: center;
+    background-color: #fcdc64;
+    margin: 0px;
+    width: 80%;
+
+}
+.mainBodyBody{
+    background-color: yellowgreen;
+    margin: 0 20%;
+}
+
+.mainIntro{
+    order: 1;
+    width: 100%;
+    padding: 2.5% 2.5%;
+}
+
+.pIndex{
     max-width: 70ch;
     font-size: 30px;
     margin: auto;
@@ -105,11 +158,14 @@ p{
 
 #ToTheTop {
     position: sticky;
-    top: 100%;
     max-width: none;
     margin: 0 10% 0 10%;
-    background-color: lightgray;
-
+    padding: 0 5% 0 5%;
+    text-align: center;
+    font-size: 30px;
+    background-color: #FFBE86;
+    border-radius: 20px;
+    margin-top: 1%;
 }
 a {
     text-decoration: none;
@@ -161,21 +217,40 @@ a {
 
 .mainContent{
     width: 50%;
-    background-color: #7e92ff;
+    background-color: #0d7792;
 }
 
-.footer{
-    color: white;
-}
+
 
 /* Index Page Content END //////////////////////*/
 
 /* Reflection Page Content START //////////////////////*/
 
+h3{
+    color:#7e92ff;
+    font-size: 35px;
+    text-shadow: 1px 1px 1px black;
+    text-align: center;
+}
+
+.pRef{
+    max-width: 70ch;
+    font-size: 30px;
+
+}
+
+
 .refBody{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    background-color: #FFB5C2;
+    border-radius: 20px;
+
+    margin: 0.2% 10% 0 10%;
+    justify-content: center;
+    
 }
 
 .refImg1{
@@ -191,6 +266,15 @@ a {
     width: 100%;
 }
 
+.content{
+    
+    padding-left: 2rem;
+
+}
+.content > p{
+    text-align: left;
+}
+
 /* Reflection Page Content END //////////////////////*/
 
 
@@ -202,6 +286,17 @@ a {
 
 
 /* Topical Page Content START //////////////////////*/
+
+.footerTop{
+
+   font-size: 18px;
+    
+    background-color: #FFBE86;
+    
+    padding: 30px;
+    margin: 0.2% 10% 0 10%;
+    border-radius: 20px;
+}
 
 /* Topical Page Content END //////////////////////*/
 

@@ -10,19 +10,19 @@
 <body>
 
     <div class = "header">
-        <h1>Reflection essay</h1><!--Tenker at dette skal stå oppå bildet(?)-->
-        <img src="assets/header_image_student.jpg" alt="Student in class watching carefully">
+        <h1 id="Title">Reflection essay</h1><!--Tenker at dette skal stå oppå bildet(?)-->
+
     
     </div>
 
     <div class = "nav">
         <!-- Href to other pages, top, horizontal-->
         <ul>
-            <li><a href="index.html">Das Home</a></li>
-            <li><a href="ref_essay.html">Das Reflection</a></li>
-            <li><a href="accessibility.html">Das accessibility</a></li>
-            <li><a href="topical_information.html">Das topical</a></li>
-            <li><a href="fun_page.html">Das fun</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="ref_essay.html">Reflection</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="topical_information.html">Topical</a></li>
+            <li><a href="fun_page.html">Fun</a></li>
 
         </ul>
 
@@ -30,7 +30,7 @@
 
     </div>
     
-    <div class = "mainBody">
+    <div class = "refBody">
 
         <!--Reflection-essay: This page must contain a short text (500-700 words)
         describing the challenges experienced by the (one, several or all) 
@@ -46,18 +46,24 @@
         language/grammar of the paragraphs. We expect headings, text and 
         images that relate to each other (content). Headings should be 
         informative and grammatically correct (proper visual hierarchy).-->
-            <div class = "content">
-                <h2>Our story</h2> <!--Needs pictures^^-->
+            
+        <div class = "content">
+                <h2 class="h2Ref">Our story</h2> <!--Needs pictures^^-->
                 <h3>The beginning</h3>
-                <p>
+                <p class="pRef">
                     Before attending our course Information Technology at OsloMet, our understanding of IT was minuscule. 
                     We attended IT in high school as an elective course, but that was nothing compared to what we were about to learn here at OsloMet. 
                     In the beginning it all seemed easy, with basic structure and stuff we already had heard before, but it escalated quickly. 
                     We soon realized that we were in deep waters and that if we didn’t keep up, we would drown in heaps of tasks and assignments. 
                     It was time to take his course a bit more seriously.
                 </p>
+
+                <div class="images">
+                    <img id="Proud_Student" src="assets/proud_pupil.jpg" alt="A young pupil smiling and giving thumbs up">
+                </div>
+                
                 <h3>Learning to take responsibility</h3>
-                <p>
+                <p class="pRef">
                     Realizing that we weren’t pupils anymore we had to take responsibility for our own learning, something we weren’t used to. 
                     We were now put in a situation where each one of us had to manage our workload and essentially be our own boss. 
                     Deciding when it was time to work and when you were done for the day became a grey area that often led to packing up early, but in the back of your mind knowing that you should have worked some more. 
@@ -68,8 +74,13 @@
                     That is the sole purpose of us attending this course; to get better at coding and programming. 
                     This is also the reason why we feel guilty for not doing enough work, our hunger for success and improvement is what makes us put in the hours and struggle through homework on a weekly basis. 
                 </p>
+                
+                <div class="images">
+                    <img id="defeated_worker" src="assets/defeated_worker.jpg" alt="A young pupil smiling and giving thumbs up">
+                </div>
+
                 <h3>The social hurdle</h3>
-                <p>
+                <p class="pRef">
                     Some of us attended this course with no friends to come along, whilst some knew others from before. 
                     Getting to befriend new people is a challenge in of itself, and it doesn’t make it easier that the course is mostly digitalized. 
                     Compared to high school which consisted of at least some childhood friends to hang around with, university is a completely new beginning. New classmates, new teachers, a new home, and a whole new lifestyle is quite challenging to adapt to all at once and is a punch in the gut when it comes to your ego and self-confidence. 
@@ -78,7 +89,7 @@
                     But it is in a time of need one truly grows as a person.
                 </p>
                 <h3>Looking back</h3>
-                <p>
+                <p class="pRef">
                     Figuring things on your own instead of just getting things handed to you is an important step if you want to grow as a person. 
                     And to be frankly, I think we have made some steps in the right direction when it comes to this. 
                     Not to be over-confident but I think we should be proud of what we have accomplished during this short period of time. 
@@ -89,10 +100,7 @@
     </div>
     
     <div class = "footer">
-        <!-- Trenger vi dette?-->
-
     </div>
-<!--Ich habe das downs from mein enemies-->
-
+    <p id="ToTheTop"><a href="#Title">To the top &uarr;</a></p>
 </body>
 </html>
