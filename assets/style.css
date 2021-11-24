@@ -44,7 +44,7 @@ h1{
     text-shadow: 0px 0px 6px black;
 }
 
-h2 a{
+ a{
     text-decoration: none;
     color: white;
 }
@@ -59,10 +59,11 @@ h2{
     display: flex;
     justify-content: center;
 }
+/*
 img {
     width: 70%;
 }
-
+*/
 
 /* UNIVERSAL CONTENT DESIGN//////////////////////*/
 
@@ -132,14 +133,12 @@ li a:hover{
 
     
     justify-content: center;
-    background-color: #fcdc64;
-    margin: 0px;
+    background-color: #FFB5C2;
+    margin: 0.2% 10% 0 10%;
     width: 80%;
+    border-radius: 20px;
+    
 
-}
-.mainBodyBody{
-    background-color: yellowgreen;
-    margin: 0 20%;
 }
 
 .mainIntro{
@@ -159,17 +158,23 @@ li a:hover{
 #ToTheTop {
     position: sticky;
     max-width: none;
-    margin: 0 10% 0 10%;
+    width: 70%;
+
     padding: 0 5% 0 5%;
     text-align: center;
     font-size: 30px;
     background-color: #FFBE86;
     border-radius: 20px;
+    margin: 0 auto;
     margin-top: 1%;
 }
 a {
     text-decoration: none;
     color: black;
+}
+.skip-to-content{
+    position: absolute;
+    transform: translateX(-400%);
 }
 
 .mainRef{
@@ -199,25 +204,56 @@ a {
     display: flex;
     order: 5;
     width: 100%;
+    border-radius: 20px;
 }
 
-.mainFun > .mainImg{ /*Order Change*/
+.mainFun > .mainImgR{ /*Order Change*/
     order: 2;
 }
 
+/*
 .mainImg{
     width: 50%;
+    
+}
+*/
+.container{
+    height: 80%;
 }
 
 .mainImg > img{
+    max-width: 100%;
+    background-color: yellow;
+    height: 100%;
+}
+
+.mainImgL > img{
     width: 100%;
     background-color: yellow;
     height: 100%;
+    border-radius: 20px 0 0 0;
+}
+
+.mainImgR > img{
+    width: 100%;
+    background-color: yellow;
+    height: 100%;
+    border-radius: 0 0 20px 0;
 }
 
 .mainContent{
     width: 50%;
     background-color: #0d7792;
+}
+.mainContentL{
+    width: 50%;
+    background-color: #0d7792;
+    border-radius: 0 0 0 20px;
+}
+.mainContentR{
+    width: 50%;
+    background-color: #0d7792;
+    border-radius: 0 20px 0 0;
 }
 
 
@@ -287,6 +323,11 @@ h3{
 
 /* Topical Page Content START //////////////////////*/
 
+.pTop{
+    max-width: 70ch;
+    font-size: 30px;
+
+}
 .footerTop{
 
    font-size: 18px;
