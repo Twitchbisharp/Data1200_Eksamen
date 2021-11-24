@@ -76,7 +76,6 @@ img {
     top:0;
 } 
 
-
 ul{
     list-style-type: none;
     margin: 0.2% 10% 0;
@@ -96,6 +95,7 @@ li a{
     color: black;
     padding: 1em;
     
+
     border-radius: 20px;
     background-color: #FFBE86;
     text-decoration: none;
@@ -129,9 +129,6 @@ li a:hover{
     flex-direction: row;
     flex-wrap: wrap;
 
-    
-
-    
     justify-content: center;
     background-color: #FFB5C2;
     margin: 0.2% 10% 0 10%;
@@ -149,7 +146,7 @@ li a:hover{
 
 .pIndex{
     max-width: 70ch;
-    font-size: 30px;
+    font-size: 20px;
     margin: auto;
     padding: 0 5% 0 5%;
     text-align: center;
@@ -162,7 +159,7 @@ li a:hover{
 
     padding: 0 5% 0 5%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     background-color: #FFBE86;
     border-radius: 20px;
     margin: 0 auto;
@@ -211,27 +208,30 @@ a {
     order: 2;
 }
 
-/*
+
 .mainImg{
-    width: 50%;
-    
+    width: 50%;   
 }
-*/
-.container{
-    height: 80%;
-}
+
+
 
 .mainImg > img{
     max-width: 100%;
     background-color: yellow;
     height: 100%;
 }
-
+.mainImgL{
+    width: 50%;
+}
 .mainImgL > img{
     width: 100%;
-    background-color: yellow;
     height: 100%;
+    background-color: yellow;
     border-radius: 20px 0 0 0;
+}
+
+.mainImgR{
+    width: 50%;
 }
 
 .mainImgR > img{
@@ -271,7 +271,7 @@ h3{
 
 .pRef{
     max-width: 70ch;
-    font-size: 30px;
+    font-size: 20px;
 
 }
 
@@ -317,15 +317,32 @@ h3{
 
 /* Accessibility Page Content START //////////////////////*/
 
+.accContent{
+    max-width: 70ch;
+}
+
 /* Accessibility Page Content END //////////////////////*/
 
 
 
 /* Topical Page Content START //////////////////////*/
 
+.topBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    background-color: #FFB5C2;
+    border-radius: 20px;
+
+    margin: 0.2% 10% 0 10%;
+    justify-content: center;
+    
+}
+
 .pTop{
     max-width: 70ch;
-    font-size: 30px;
+    font-size: 20px;
 
 }
 .footerTop{
@@ -337,6 +354,16 @@ h3{
     padding: 30px;
     margin: 0.2% 10% 0 10%;
     border-radius: 20px;
+}
+
+.footerTop > p > a:link{
+    color: #428bff;
+}
+.footerTop > p > a:visited{
+    color: #264f91;
+}
+.footerTop > p > a:hover{
+    color: #000dff;
 }
 
 /* Topical Page Content END //////////////////////*/
