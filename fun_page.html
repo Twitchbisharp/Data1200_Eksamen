@@ -105,13 +105,11 @@
 
     <script>
         /*alert("Audio Warning")*/
-        var tooSmall = 3000;
-            var wHeight = $(window).height();
-            var wWidth = $(window).width();
-
-            if(wWidth < tooSmall){
-                alert("small screen");
+        window.onresize = function(event){
+            if ((window.innerWidth < 800)){
+                alert("Warning, avoid big numbers when using the Maze on mobile.")
             };
+        }
         /* Javascript Random Word*/
 
 
