@@ -12,5 +12,6 @@ function aniYes(){
 function aniNo(){
     navChange.style.right = "-200px"
 }
-/* SPLIT */
+/* Fun Page js ??*/
+
 

@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="assets/style.css">
     <script type="text/javascript" src="assets/script.js"></script>
 </head>
-<body>
+<!-- Had to remove background img, so we made meme-->
+<body class="fun_body_omega">
 
     <div class = "nav">
         <!-- Href to other pages, top, horizontal-->
 
             <!-- LOGO -->
-            <div class="navLE"> <img src="assets/oslomet_logo.png" width=""></img></div>
+            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png"></img></a></div>
             <div class="navL">
                 <ul>
                     <li><a href="index.html">Home</a></li>          
@@ -46,21 +47,263 @@
         (videos or pictures). -->
 
     </div>
+    <!-- COLUMN -->
+    <div class="funPageContent">
+        <div class="mazeBody">
+            <div class="mazeP">
+                <br>
+                <p>!Beware! Mobile cannot support bigger numbers</p>
+
+            </div>
+            <div class="maze">
+
+                <div class="canvasLeft">
+                    <canvas></canvas>
+                </div>
+                <div class="inputRight">
+                    <ul>
+                        <li><label>Width:</label><input id=width type="text"/></li>
+                        <li><label>Height:</label><input id=height type="text"/></li>
+                        <li><label>Path Width:</label><input id=pathwidth type="text"/></li>
+                        <li><label>Wall Width:</label><input id=wallwidth type="text"/></li>
+                        <li><label>Outer Width:</label><input id=outerwidth type="text"/></li>
+                        <li><label>Path Color:</label><input id=pathcolor type="text"/></li>
+                        <li><label>Wall Color:</label><input id=wallcolor type="text"/></li>
+                        <li><label>Seed:</label><input id=seed type="text"/></li>
+                        <li><input id=randomseed type="button" value="Random Seed"/></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="javascriptCool">
+            <p class="javascriptCoolP">&nbsp;&nbsp;Javascript is&nbsp;</p>
+            <span class="randomizer wisteria">beautiful.</span>
+            <span class="randomizer midnight">powerful.</span>
+            <span class="randomizer belize">divine.</span>
+            <span class="randomizer pomegranate">fancy.</span>
+            <span class="randomizer green">elegant.</span>
+            <span class="randomizer belize">rich.</span>
+            <span class="randomizer wisteria">smart.</span>
+            <span class="randomizer midnight">free.</span>
+            <span class="randomizer pomegranate">love.</span>
+            <span class="randomizer green">tiring.</span>
+            <span class="randomizer belize">overcomplicated.</span>
+            <span class="randomizer wisteria">a_pain.</span>
+            <span class="randomizer pomegranate">cool.</span>
+            <span class="randomizer green">hip.</span>
+            <span class="randomizer midnight">js.</span>
+        </div>
+
+    </div>
     
     <div class = "footer">
         <!-- Trenger vi dette? Nå ja-->
-        <embed src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" autostart="true" loop="true" height="0">
+        <embed src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" autostart="true" loop="false" height="0">
             <!-- 'Height="0"' used to hide the audio controls-->
     </div>
 
     <script>
         /*alert("Audio Warning")*/
 
+        /* Javascript Random Word*/
+
+
+        var words = document.getElementsByClassName('randomizer');
+        var wordArray = [];
+        var currentWord = 0;
+
+        words[currentWord].style.opacity = 1;
+        for (var i = 0; i < words.length; i++) {
+            splitLetters(words[i]);
+        }
+
+        function changeWord() {
+            var cw = wordArray[currentWord];
+            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
+            for (var i = 0; i < cw.length; i++) {
+            animateLetterOut(cw, i);
+        }
+
+        for (var i = 0; i < nw.length; i++) {
+            nw[i].className = 'letter behind';
+            nw[0].parentElement.style.opacity = 1;
+            animateLetterIn(nw, i);
+        }
+
+        currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+        }
+
+        function animateLetterOut(cw, i) {
+            setTimeout(function () {
+            cw[i].className = 'letter out';
+            }, i * 80);
+        }
+
+        function animateLetterIn(nw, i) {
+            setTimeout(function () {
+            nw[i].className = 'letter in';
+            }, 340 + i * 80);
+        }
+
+        function splitLetters(word) {
+            var content = word.innerHTML;
+            word.innerHTML = '';
+            var letters = [];
+            for (var i = 0; i < content.length; i++) {
+            var letter = document.createElement('span');
+            letter.className = 'letter';
+            letter.innerHTML = content.charAt(i);
+            word.appendChild(letter);
+            letters.push(letter);
+        }
+
+        wordArray.push(letters);
+        }
+
+        changeWord();
+        setInterval(changeWord, 4000);
+
+
+        /* MAZE */
+
+        pathWidth = 20       //PathBredde
+        wall = 2             //WallBredde
+        outerWall = 2        //WallMargin
+        width = 10           //Antall horisontal paths
+        height = 10          //Antall vertikal paths
+        delay = 1            //Delay algoritme
+        x = width/2|0        //Horisontal start
+        y = height/2|0       //Vertikal start
+        seed = Math.random()*100000|0//MinecraftSeed
+        wallColor = '#d24'   //WallColor
+        pathColor = '#222a33'//PathColor
+
+        randomGen = function(seed){
+            if(seed===undefined)var seed=performance.now()
+            return function(){
+            seed = (seed * 9301 + 49297) % 233280
+            return seed/233280
+            }
+        }
+
+        init = function(){
+            offset = pathWidth/2+outerWall
+            map = []
+            canvas = document.querySelector('canvas')
+            ctx = canvas.getContext('2d')
+            canvas.width = outerWall*2+width*(pathWidth+wall)-wall
+            canvas.height = outerWall*2+height*(pathWidth+wall)-wall
+            ctx.fillStyle = wallColor
+            ctx.fillRect(0,0,canvas.width,canvas.height)
+            random = randomGen(seed)
+            ctx.strokeStyle = pathColor
+            ctx.lineCap = 'square'
+            ctx.lineWidth = pathWidth
+            ctx.beginPath()
+            for(var i=0;i<height*2;i++){
+                map[i] = []
+                for(var j=0;j<width*2;j++){
+                    map[i][j] = false
+                }
+            }
+            map[y*2][x*2] = true
+            route = [[x,y]]
+            ctx.moveTo(x*(pathWidth+wall)+offset,
+                y*(pathWidth+wall)+offset)
+        }
+        init()
+
+            inputWidth = document.getElementById('width')
+            inputHeight = document.getElementById('height')
+            inputPathWidth = document.getElementById('pathwidth')
+            inputWallWidth = document.getElementById('wallwidth')
+            inputOuterWidth = document.getElementById('outerwidth')
+            inputPathColor = document.getElementById('pathcolor')
+            inputWallColor = document.getElementById('wallcolor')
+            inputSeed = document.getElementById('seed')
+            buttonRandomSeed = document.getElementById('randomseed')
+
+        settings = {
+            display: function(){
+                inputWidth.value = width
+                inputHeight.value = height
+                inputPathWidth.value = pathWidth
+                inputWallWidth.value = wall
+                inputOuterWidth.value = outerWall
+                inputPathColor.value = pathColor
+                inputWallColor.value = wallColor
+                inputSeed.value = seed
+            },
+            check: function(){
+                if(inputWidth.value != width||
+                    inputHeight.value != height||
+                    inputPathWidth.value != pathWidth||
+                    inputWallWidth.value != wall||
+                    inputOuterWidth.value != outerWall||
+                    inputPathColor.value != pathColor||
+                    inputWallColor.value != wallColor||
+                    inputSeed.value != seed){
+                    settings.update()
+                    }
+            },
+            update: function(){
+            clearTimeout(timer)
+            width = parseFloat(inputWidth.value)
+            height = parseFloat(inputHeight.value)
+            pathWidth = parseFloat(inputPathWidth.value)
+            wall = parseFloat(inputWallWidth.value)
+            outerWall = parseFloat(inputOuterWidth.value)
+            pathColor = inputPathColor.value
+            wallColor = inputWallColor.value
+            seed = parseFloat(inputSeed.value)
+            x = width/2|0
+            y = height/2|0
+            init()
+            loop()
+            }
+        }
+
+        buttonRandomSeed.addEventListener('click',function(){
+            inputSeed.value = Math.random()*100000|0
+        })
+
+        loop = function(){
+            x = route[route.length-1][0]|0
+            y = route[route.length-1][1]|0
+        
+            var directions = [[1,0],[-1,0],[0,1],[0,-1]],
+                alternatives = []
+        
+            for(var i=0;i<directions.length;i++){
+                if(map[(directions[i][1]+y)*2]!=undefined&&
+                    map[(directions[i][1]+y)*2][(directions[i][0]+x)*2]===false){
+                    alternatives.push(directions[i])
+                    }
+            }
+
+            if(alternatives.length===0){
+                route.pop()
+                if(route.length>0){
+                    ctx.moveTo(route[route.length-1][0]*(pathWidth+wall)+offset,
+                        route[route.length-1][1]*(pathWidth+wall)+offset)
+                        timer = setTimeout(loop,delay)
+                }
+                return;
+            }
+            direction = alternatives[random()*alternatives.length|0]
+            route.push([direction[0]+x,direction[1]+y])
+            ctx.lineTo((direction[0]+x)*(pathWidth+wall)+offset,
+                (direction[1]+y)*(pathWidth+wall)+offset)
+            map[(direction[1]+y)*2][(direction[0]+x)*2] = true
+            map[direction[1]+y*2][direction[0]+x*2] = true
+            ctx.stroke()
+            timer = setTimeout(loop,delay)
+            }
+            settings.display()
+            loop()
+            setInterval(settings.check,400)
 
     </script>
-
-    <button onclick="toTheTop()" id="ToTheTop">
-        <img src="assets/uparrow.png" width="20"></img>
-    </button>
 </body>
 </html>

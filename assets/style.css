@@ -40,6 +40,10 @@ body{
     margin: 0;
 }
 
+.fun_body_omega{
+    background-image: none;
+}
+
 h1{
     margin-left: 5%;
     text-align: center;
@@ -54,14 +58,12 @@ p{
 
 a{
     text-decoration: none;
-    color: white;
 }
 
 h2{
-    text-align: center;
+    text-align: left;
     font-size: 50px;
-    text-shadow: 0px 0px 5px black;
-    color: white;
+    color: red;
 }
 
 .images {
@@ -79,11 +81,6 @@ button {
     padding-top: 0.75%;
 }
 
-/*
-img {
-    width: 70%;
-}
-*/
 
 /* UNIVERSAL CONTENT DESIGN//////////////////////*/
 
@@ -122,7 +119,7 @@ img {
     margin: 0px 6px;
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 20px;
     border-bottom: 1px solid transparent;
 }
 
@@ -133,7 +130,7 @@ img {
 .navLE{
     width: 100%;
 }
-.navLE > img{
+.navLE > a > img{
     width: 50%;
     min-height: 100%;  
     order: 1;
@@ -165,7 +162,7 @@ img {
     flex-wrap: wrap;
 
     justify-content: center;
-    background-color: #EEE2DC;
+    background-color: white;
     margin: 0.2% 10% 0 10%;
     width: 80%;
     border-radius: 20px;
@@ -183,14 +180,13 @@ img {
     font-size: 20px;
     margin: auto;
     padding: 0 5% 0 5%;
-    text-align: center;
+    text-align: left;
 }
 #content-start-index > p::first-letter{
     color: #1b738d;
     line-height: 1;
     margin: 0;
-    border: 2px solid;
-    border-radius: 8px;
+    font-weight: bold;
     font-size: 70px;
     float: left;
 }
@@ -206,25 +202,31 @@ img {
     background-color: #1b738d;
     border-radius: 20px;
 }
+#ToTheTop:hover {
+    background-color: #2b8caa;
+}
 
 
 a {
     text-decoration: none;
-    color: black;
 }
 .skip-to-content{
     position: absolute;
     transform: translateX(-400%);
 }
-
+.h2Link {
+    text-align: center;
+}
 .h2Link > a {
     margin: 0 1%;
+    color: white;
+    font-weight: bold;
 }
 
 .h2Link > a:hover {
     border-radius: 20px;
     padding: 1%;
-    color: white;
+    color: #fbb51d;
     text-shadow: 2px 2px 50px black;
 }
 
@@ -290,7 +292,6 @@ a {
 
 .mainImgR > img{
     width: 100%;
-    background-color: yellow;
     height: 100%;
     border-radius: 0 0 20px 0;
 }
@@ -315,9 +316,13 @@ a {
 /* Index Page Content END //////////////////////*/
 
 /* Reflection Page Content START //////////////////////*/
+.h2Ref {
+    color: #fbb51d;
+    margin-left: 6.75%;
+    font-weight: bold;
+}
 
 h3{
-    color:#7e92ff;
     font-size: 35px;
     text-shadow: 1px 1px 1px black;
     text-align: center;
@@ -327,7 +332,18 @@ h3{
     max-width: 70ch;
     font-size: 20px;
     margin: 0 auto;
-    text-align: center;
+    padding: 0 5%;
+    text-align: left;
+    border-left: 1px solid #1b738d;
+    padding-left: 2%;
+}
+.pRef::first-letter {
+    color: #1b738d;
+    line-height: 1;
+    margin: 0;
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
 }
 
 
@@ -336,8 +352,9 @@ h3{
     flex-direction: row;
     flex-wrap: wrap;
 
-    background-color: #C2B9B0;
+    background-color: white;
     border-radius: 20px;
+    box-shadow: 2px 2px 20px;
 
     margin: 0.2% 10% 0 10%;
     justify-content: center;
@@ -370,6 +387,20 @@ h3{
 
 .pAcc {
     font-size: 20px;
+    max-width: 70ch;
+    margin: 0 auto;
+    padding: 0 5%;
+    text-align: left;
+    border-left: 1px solid #1b738d;
+    padding-left: 2%;
+}
+.pAcc::first-letter {
+    color: #1b738d;
+    line-height: 1;
+    margin: 0 1%;
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
 }
 
 /* Accessibility Page Content END //////////////////////*/
@@ -383,7 +414,7 @@ h3{
     flex-direction: row;
     flex-wrap: wrap;
 
-    background-color: #C2B9B0;
+    background-color: white;
     border-radius: 20px;
 
     margin: 0.2% 10% 0 10%;
@@ -392,29 +423,46 @@ h3{
 }
 
 .pTop{
-    max-width: 70ch;
     font-size: 20px;
+    max-width: 70ch;
+    margin: 0 auto 1% auto;
+    padding: 0 5%;
+    text-align: left;
+    border-left: 1px solid #1b738d;
+    padding-left: 2%;
 
 }
-.footerTop{
+.pTop::first-letter{
+    color: #1b738d;
+    line-height: 1;
+    margin: 0;
+    font-weight: bold;
+    font-size: 70px;
+    float: left;
+}
+.h2Top {
+    margin-left: 6.75%;
+    text-align: left;
+    color: #fbb51d;
+}
 
-   font-size: 18px;
-    
-    background-color: #FFBE86;
-    
+.footerTop{
+    font-size: 18px;
+    background-color: #E2A82E;
     padding: 30px;
     margin: 0.2% 10% 0 10%;
     border-radius: 20px;
 }
 
+
 .footerTop > p > a:link{
-    color: #428bff;
+    color: #2AD09A;
 }
 .footerTop > p > a:visited{
-    color: #264f91;
+    color: #1E6F55
 }
 .footerTop > p > a:hover{
-    color: #000dff;
+    color: #29B688
 }
 
 /* Topical Page Content END //////////////////////*/
@@ -423,19 +471,203 @@ h3{
 
 /* Fun Page Content START //////////////////////*/
 
+.funPageContent{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 #funTitle{
     animation: typing 2s;
     white-space: nowrap;
     overflow: hidden;
-    
+    margin: 0 auto;
 }
 
 @keyframes typing{
     from {width:0%}
-    to {width:30%}
+    to {width:40%}
 }
 
 
+.javascriptCool{
+    font-size: 20px;
+    position: absolute;
+    width: 450px;
+    left: 20%;
+    /*margin:-20px 0 150px -225px;*/
+    height: 40px;
+    /*top: 50%;*/
+
+    z-index: -69;
+}
+  
+.javascriptCoolP {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 auto;
+}
+  
+.randomizer {
+    position: absolute;
+    top: 0px;
+    width: 220px;
+    opacity: 0;
+}
+  
+.letter {
+    display: inline-block;
+    position: relative;
+    /*float: left;*/
+    transform: translateZ(25px);
+    transform-origin: 50% 50% 25px;
+}
+  
+.letter.out {
+    transform: rotateX(90deg);
+    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+  
+.letter.behind {
+    transform: rotateX(-90deg);
+}
+  
+.letter.in {
+    transform: rotateX(0deg);
+    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+  
+.wisteria {
+    color: #8e44ad;
+}
+  
+.belize {
+    color: #2980b9;
+}
+  
+.pomegranate {
+    color: #c0392b;
+}
+  
+.green {
+    color: #16a085;
+}
+  
+.midnight {
+    color: #2c3e50;
+}
+
+
+/* MAAAAAAZEEEEE*/
+.mazeBody{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.mazeP{
+    order: 1;
+    width: 100%;
+}
+.mazeP > p{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.maze{
+
+    order: 2;
+    display: block;
+    /*display: inline-block;*/
+    margin: 40px auto 0 auto;
+
+    /*position: absolute;*/
+    top: 100%;
+    
+
+    display: flex; 
+    justify-content: center; 
+    /*margin-top: 20%;*/
+    background-color: green;
+    padding: 10px;
+    border-radius: 20px;
+}
+.maze ul{
+    /*position: absolute;*/
+    right: 0;
+    width: 220px;
+    height: 100%;
+    /*float: left;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*text-align: left;*/
+    color: #eee;
+    font-family: helvetica;
+
+}
+.maze li{
+    padding: 5px 5px 5px 5px;
+    left:0px;
+}
+.maze label{
+    width: 12ch;
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    padding-right: 5px;
+    text-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+input{
+    width: 12ch;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background: #ccc;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 2px;
+    transition: 200ms;
+    box-shadow: 2px 2px 0px rgba(0,0,0,0.2);
+}
+input:focus{
+    outline: none;
+    background: #fff;
+    color: #222;
+}
+input[type=button]{
+    background: #111;
+    color: #eee;
+    margin-left: 50%;
+    font-weight: normal;
+    cursor: pointer;
+}
+input[type=button]:active{
+    transform: translate(2px,2px);
+    box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
+    left:0px;
+}
+#randomseed{
+    margin:0;
+}
+canvas{
+    /*margin-right: 220px;*/
+    display: inline-block;
+    /*float: left;*/
+}
+
+.canvasLeft {
+    display: flex;
+
+}
+.inputRight {
+    display: flex;
+    justify-self: flex-end;
+}
 
 /* Fun Page Content END //////////////////////*/
 
@@ -454,7 +686,8 @@ h3{
         }
 
         h2{
-            font-size: 40px;   
+            font-size: 40px; 
+            margin: 1% auto;  
         }
 
         /* NAV BAR START //////////////////////*/
@@ -508,17 +741,18 @@ h3{
         
         .pIndex{
             max-width: 70ch;
-            font-size: 20px;
-            margin: auto;
+            font-size: 12px;
+            margin: 0 auto;
             padding: 0 5% 0 5%;
             text-align: center;
+            line-height: 1.1rem;
         }
 
         
 
         a {
             text-decoration: none;
-            color: black;
+            font-size: 20px;
         }
         .skip-to-content{
             position: absolute;
@@ -609,7 +843,6 @@ h3{
 
         /* REF PAGE START //////////*/
         h3{
-            color:#7e92ff;
             font-size: 22px;
             text-shadow: 1px 1px 1px black;
             text-align: center;
@@ -619,7 +852,9 @@ h3{
             max-width: 40ch;
             font-size: 16px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
+            border-left: 1px solid black;
+            padding-left: 2%;
         }
         
         
@@ -647,7 +882,7 @@ h3{
         }
 
         .images > img{
-            margin: 10px 0 0 0;
+            margin: 10px 0 2% 0;
             width: 95%;
             
         }
@@ -658,7 +893,7 @@ h3{
             max-width: 40ch;
             font-size: 16px;
             margin: 0 auto;
-            text-align: center;
+            text-align: left;
         }
         
         
@@ -695,7 +930,7 @@ h3{
         }
     .footerTop{
             font-size: 13px;
-             
+            
              
             max-width: 50ch;
              padding: 30px;
@@ -705,8 +940,18 @@ h3{
     }
 /* Topical Page Content END //////////////////////*/
 
-        
-    } 
+/* FUN PAGE START /////////*/
+
+#randomseed{
+    margin: 0 0 0 50px;
+}
+/*
+.maze{
+    margin: 20px auto 0 auto;
+}
+*/
+/* FUN PAGE END //////////*/
+
 /* MEDIA QUERY END        600px     //////////////////////*/
 
 
@@ -717,6 +962,8 @@ h3{
     h1{
         font-size: 58px;
     }
+    
+
 
     /* NAV BAR START //////////////////////*/
 
@@ -725,13 +972,28 @@ h3{
     
     h2{
         font-size: 36px;
+        margin: 5% auto;
     }
     h3{
-        color:#7e92ff;
         font-size: 24px;
         text-shadow: 1px 1px 1px black;
         text-align: center;
     }
+/*Index page content start*/
+.pIndex {
+    font-size: 16px;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+}
+#content-start-index > p::first-letter{
+    font-size: 40px;
+}
+
+.h2Link {
+    font-size: 20px;
+}
+
+/*Index page content end*/
 /* Reflection Page Content START //////////////////////*/
     .refBody{
         display: flex;
@@ -749,10 +1011,12 @@ h3{
         max-width: 45ch;
         font-size: 17px;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
+        border-left: 1px solid black;
+        padding-left: 2%;
     }
     .images > img{
-        margin: 10px 0 0 0;
+        margin: 10px 0 2% 0;
         width: 95%;
         
     }
@@ -811,6 +1075,12 @@ h3{
 /* Topical Page Content END //////////////////////*/
 } 
 
+/*Fun page content start*/
+/*.maze{
+    margin: 40px auto 0 auto;
+}*/
+/*Fun page content end*/
+
 
 /* MEDIA QUERY END //////////////////////*/
 
@@ -832,7 +1102,6 @@ h3{
     
     li{
         font-size: 19px;
-        font-weight: bold;
     }
 /* NAV BAR END //////////////////////*/
 
@@ -854,7 +1123,7 @@ h3{
         max-width: 50ch;
         font-size: 20px;
         margin: 0 auto;
-        text-align: center;
+        text-align: left;
     }
 /* Accessibility Page Content END //////////////////////*/
 
@@ -875,10 +1144,10 @@ h3{
      max-width: 50ch;
       font-size: 20px;
       margin: 0 auto;
-      text-align: center;
+
 }
 .images > img{
-      margin: 10px 0 0 0;
+      margin: 10px 0 2% 0;
       width: 95%;
     
 }
@@ -892,7 +1161,7 @@ h3{
 
     border-radius: 20px;
 
-    margin: 0.1% 10% 0 10%;
+    margin: 0.2% 10% 0 10%;
     justify-content: center;
     
 }
@@ -915,7 +1184,28 @@ h3{
 }
 /* Topical Page Content END //////////////////////*/
 
+
+/*Fun page content start*/
+
+/*Fun page content end*/
 } 
 
+@media screen and (min-width: 750px) and (max-width: 1000px){
+/*Index start*/
+.pIndex {
+    font-size: 16px;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+}
+.h2Link{
+   margin: 0;
+}
+.h2Link > a {
+    font-size: 30px;
+}
+/*Index end*/
+
+
+}
 
 /* MEDIA QUERY END //////////////////////*/
