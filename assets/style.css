@@ -90,8 +90,9 @@ button {
 
 .nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
+    flex-wrap: nowrap;
     background-color: #1b738d;
     padding: 5px 5%;
     position: sticky;
@@ -111,7 +112,6 @@ button {
     display: inline;
     border-bottom: 1px solid transparent;
     float: left;
-
 }
 .navL a{
     display: block;
@@ -383,6 +383,12 @@ h3{
 
 .accContent{
     max-width: 70ch;
+}
+.accContent > h2{
+    margin-left: 1%;
+}
+.images > img {
+    width: 80%;
 }
 
 .pAcc {
@@ -678,7 +684,7 @@ canvas{
 /* MEDIA QUERY ENTRY //////////////////////////////////////////////////////////////////////*/
 
 /* MEDIA QUERY START     600px      //////////////////////*/
-    @media screen and (max-width: 600px){
+    @media only screen and (max-width: 600px){
        
 
         h1{
@@ -698,7 +704,7 @@ canvas{
             border-radius: 20px;
         }
         li{
-            font-size: 14px;
+            font-size: 15px;
             display: inline-block;
         }
         li a{
@@ -938,6 +944,7 @@ canvas{
              border-radius: 20px;
          
     }
+
 /* Topical Page Content END //////////////////////*/
 
 /* FUN PAGE START /////////*/
@@ -951,13 +958,13 @@ canvas{
 }
 */
 /* FUN PAGE END //////////*/
-
+}
 /* MEDIA QUERY END        600px     //////////////////////*/
 
 
 
 /* MEDIA QUERY START      600 px - 750 px          //////////////////////*/
-@media screen and (min-width: 600px) and (max-width: 750px){
+@media only screen and (min-width: 600px) and (max-width: 750px){
     
     h1{
         font-size: 58px;
@@ -1055,7 +1062,9 @@ canvas{
         justify-content: center;
         
     }
-
+    #Title {
+        font-size: 56px;
+    }
     .pTop{
             max-width: 45ch;
             font-size: 17px;

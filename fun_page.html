@@ -105,7 +105,13 @@
 
     <script>
         /*alert("Audio Warning")*/
+        var tooSmall = 3000;
+            var wHeight = $(window).height();
+            var wWidth = $(window).width();
 
+            if(wWidth < tooSmall){
+                alert("small screen");
+            };
         /* Javascript Random Word*/
 
 
@@ -303,6 +309,8 @@
             settings.display()
             loop()
             setInterval(settings.check,400)
+
+            
 
     </script>
 </body>
