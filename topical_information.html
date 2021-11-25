@@ -6,26 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topical Page</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="assets/script.js"></script>
 </head>
 <body>
+    <div class = "nav">
+        <!-- Href to other pages, top, horizontal-->
+
+            <!-- LOGO -->
+            <div class="navLE"> <img src="assets/oslomet_logo.png" width=""></img></div>
+            <div class="navL">
+                <ul>
+                    <li><a href="index.html">Home</a></li>          
+                    <li><a href="ref_essay.html">Reflection</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="topical_information.html">Topical</a></li>
+                    <li><a href="fun_page.html">Fun</a></li>
+                </ul>
+            </div>
+    </div>
+
     <div class = "header">
         <h1 id="Title">Topical Information</h1><!--Tenker at dette skal stå oppå bildet(?)-->
     </div>
     <a class="skip-to-content" href="#content-start-topical">Skip to content</a>
-    <div class = "nav">
-        <!-- Href to other pages, top, horizontal-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ref_essay.html">Reflection</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><a href="topical_information.html">Topical</a></li>
-            <li><a href="fun_page.html">Fun</a></li>
-
-        </ul>
-
-
-
-    </div>
     
     <div id="content-start-topical" class = "topBody">
 
@@ -102,5 +105,9 @@
             <a href="https://www.aftenposten.no/oslo/i/pL3KgE/fisket-opp-ti-elsparkesykler-fra-akerselva">https://www.aftenposten.no/oslo/i/pL3KgE/fisket-opp-ti-elsparkesykler-fra-akerselva</a>
         </p>
     </div>
+
+    <button onclick="toTheTop()" id="ToTheTop">
+        <img src="assets/uparrow.png" width="20"></img>
+    </button>
 </body>
 </html>
