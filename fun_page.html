@@ -6,31 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fun Page</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="assets/script.js"></script>
 </head>
 <body>
 
-    <div class = "header">
-        <h1 id="Title">Fun Page </h1><!--Tenker at dette skal stå oppå bildet(?)-->
-    </div>
-
-    <embed src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" autostart="true" loop="true" height="0">
-    <!-- 'Height="0"' used to hide the audio controls-->
-    
-    <a class="skip-to-content" href="#content-start-fun">Skip to content</a>
     <div class = "nav">
         <!-- Href to other pages, top, horizontal-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ref_essay.html">Reflection</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><a href="topical_information.html">Topical</a></li>
-            <li><a href="fun_page.html">Fun</a></li>
 
-        </ul>
-
-
-
+            <!-- LOGO -->
+            <div class="navLE"> <img src="assets/oslomet_logo.png" width=""></img></div>
+            <div class="navL">
+                <ul>
+                    <li><a href="index.html">Home</a></li>          
+                    <li><a href="ref_essay.html">Reflection</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="topical_information.html">Topical</a></li>
+                    <li><a href="fun_page.html">Fun</a></li>
+                </ul>
+            </div>
     </div>
+
+    
+
+    <div class = "header">
+        <h1 id="funTitle">Fun Page </h1><!--Tenker at dette skal stå oppå bildet(?)-->
+    </div>
+    
+    <a class="skip-to-content" href="#content-start-fun">Skip to content</a>
+    
     
     <div id="content-start-fun" class = "funBody">
 
@@ -45,14 +48,19 @@
     </div>
     
     <div class = "footer">
-        <!-- Trenger vi dette?-->
-
+        <!-- Trenger vi dette? Nå ja-->
+        <embed src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" autostart="true" loop="true" height="0">
+            <!-- 'Height="0"' used to hide the audio controls-->
     </div>
 
     <script>
-        alert("Audio Warning")
+        /*alert("Audio Warning")*/
 
 
     </script>
+
+    <button onclick="toTheTop()" id="ToTheTop">
+        <img src="assets/uparrow.png" width="20"></img>
+    </button>
 </body>
 </html>

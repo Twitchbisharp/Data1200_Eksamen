@@ -6,26 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="assets/style.css">
+    <script type="text/javascript" src="assets/script.js"></script>
 </head>
 <body>
+
+    <div class = "nav">
+        <!-- Href to other pages, top, horizontal-->
+
+            <!-- LOGO -->
+            <div class="navLE"> <img src="assets/oslomet_logo.png" width=""></img></div>
+            <div class="navL">
+                <ul>
+                    <li><a href="index.html">Home</a></li>          
+                    <li><a href="ref_essay.html">Reflection</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="topical_information.html">Topical</a></li>
+                    <li><a href="fun_page.html">Fun</a></li>
+                </ul>
+            </div>
+    </div>
+
     <div class = "header">
         <h1 id="Welcome">Welcome</h1> <!--Tenker at denne teksten skal stå oppå bildet(?)-->
     </div>
 
     <a class="skip-to-content" href="#content-start-index">Skip to content</a>
-    
-    <div class = "nav">
-        <!-- Href to other pages, top, horizontal-->
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="ref_essay.html">Reflection</a></li>
-            <li><a href="accessibility.html">Accessibility</a></li>
-            <li><a href="topical_information.html">Topical</a></li>
-            <li><a href="fun_page.html">Fun</a></div></li>
-
-        </ul>
-    
-    </div>
     
     <div class = "mainBody">
         <!--Welcome! (index.html): this page should be a general information page 
@@ -43,10 +48,10 @@
 
         <div class="mainRef">
             <div class="mainImgL">
-                <img src="assets/header_image_student.jpg" alt="Student in class watching carefully">
+                <img src="assets/girl_sitting_in_a_room.png" alt="A girl sitting a room with a book while looking up">
             </div>
             <div class="mainContentR">
-                <h2><a href="ref_essay.html">Reflection</a></h2>
+                <h2 class="h2Link"><a href="ref_essay.html">Reflection</a></h2>
                 <p class="pIndex">Want to know our story through our first semester at OsloMet? Check out our reflection essay! Here we reflect on how our first 
                     impressions of our course was as well as our difficulties and struggles.
                 </p>
@@ -55,10 +60,10 @@
 
         <div class="mainAcc">
             <div class="mainImg">
-                <img src="assets/header_image_student.jpg" alt="Student in class watching carefully">
+                <img src="assets/accessability_img.png" alt="Picture of a button for accessability">
             </div>
             <div class="mainContent">
-                <h2><a href="accessibility.html">Accessibility</a></h2>
+                <h2 class="h2Link"><a href="accessibility.html">Accessibility</a></h2>
                 <p class="pIndex">Websites such as this one has to be accessable for as many as possible. Here is our way of approaching that very problem.</p>
             </div>
 
@@ -66,10 +71,10 @@
         
         <div class="mainTopic">
             <div class = "mainImg">
-                <img src="assets/header_image_student.jpg" alt="Student in class watching carefully">
+                <img src="assets/a_room_filled_with_machines.png" alt="A room filled with machines">
              </div>
             <div class = "mainContent">
-                <h2> <a href="topical_information.html">Topical Information</a></h2>
+                <h2 class="h2Link"><a href="topical_information.html">Topical Information</a></h2>
                 <p class="pIndex">Do you want to see one of our assignments during our semester? Click here to view our essay for the course Technology and Society for programmers.</p>
             </div>
         </div>
@@ -79,19 +84,17 @@
                 <img src="assets/header_image_student.jpg" alt="Student in class watching carefully">
             </div>
             <div class="mainContentL">
-                <h2> <a href="fun_page.html">Fun Page</a></h2>
+                <h2 class="h2Link"> <a href="fun_page.html">Fun Page</a></h2>
                 <p class="pIndex">Here is a little off-topic page that we made for fun. Have a look!</p>
             </div>    
         </div>
 
-        
-    </div>
-    <p id="ToTheTop"><a href="#Welcome">To the top &uarr;</a></p>
-
-    <div class = "footer">
-        <!-- Trenger vi dette?-->
 
     </div>
 
+    <button onclick="toTheTop()" id="ToTheTop">
+        <img src="assets/uparrow.png" width="20"></img>
+    </button>
+    
 </body>
 </html>
