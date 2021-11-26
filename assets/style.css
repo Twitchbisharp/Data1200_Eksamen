@@ -720,7 +720,13 @@ canvas{
 
         }
         .navL > ul > li > a{
-            padding: 5px 15px 5px 0;
+            padding: 0px 15px 0px 0;
+        }
+        .navL > ul > li > a{
+            border-radius: none;
+        }
+        .nav{
+            border-radius: 0px;
         }
 
         /* NAV BAR END //////////////////////*/
