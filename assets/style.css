@@ -460,10 +460,6 @@ h3{
     border-radius: 20px;
 }
 
-.footerTop > p{
-    width: 95ch;
-}
-
 .footerTop > p > a:link{
     color: #2AD09A;
 }
@@ -949,7 +945,19 @@ canvas{
     }
 
     .footerTop > p{
-        width: 65ch;
+        width: 45ch;
+        
+        /*Filip tester ting*/
+        display: table;
+        width: fit-content;
+    }
+
+    .footerTop > p > a{
+        font-size: 13px;
+
+        /*Filip tester ting*/
+        display: table;
+        width: fit-content;
     }
 
 /* Topical Page Content END //////////////////////*/
