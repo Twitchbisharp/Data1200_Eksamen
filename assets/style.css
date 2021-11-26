@@ -945,11 +945,15 @@ canvas{
     }
 
     .footerTop > p{
-        width: 45ch;
+        width: 35ch;
         
         /*Filip tester ting*/
         display: table;
         width: fit-content;
+    }
+
+    .footerTop > p > a:link{
+        font-size: 13px;
     }
 
     .footerTop > p > a{
