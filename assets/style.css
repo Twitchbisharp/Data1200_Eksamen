@@ -479,6 +479,10 @@ h3{
 
 
 /* Fun Page Content START //////////////////////*/
+.fun_body_omega{
+    /* background-image: url('fun-page-background-repeater.jpg'); */
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('fun-page-background-repeater.jpg');
+}
 
 .funPageContent{
     display:flex;
@@ -491,6 +495,8 @@ h3{
     white-space: nowrap;
     overflow: hidden;
     margin: 0 auto;
+    padding: 0 20px;
+    text-shadow: 5px 5px 20px black;
 }
 
 @keyframes typing{
@@ -502,13 +508,17 @@ h3{
 .javascriptCool{
     font-size: 20px;
     position: absolute;
-    width: 250px;
+    width: 200px;
     left: 40%;
     /*margin:-20px 0 150px -225px;*/
     height: 40px;
     /*top: 50%;*/
-
     z-index: -69;
+
+    /*Testing background color*/
+    background-color: rgba(255, 177, 248, 0.787);
+    border-radius: 20px;
+    padding-right: 85px;
 }
   
 .javascriptCoolP {
@@ -520,8 +530,13 @@ h3{
 .randomizer {
     position: absolute;
     top: 0px;
-    width: 10ch;
+    width: 15ch;
     opacity: 0;
+}
+#resize{
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
   
 .letter {
@@ -546,23 +561,23 @@ h3{
     transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
   
-.wisteria {
+.color1 { /*wisteria*/
     color: #8e44ad;
 }
   
-.belize {
+.color2 { /*belize*/
     color: #2980b9;
 }
   
-.pomegranate {
+.color3 { /*pomegranate*/
     color: #c0392b;
 }
   
-.green {
+.color4 { /*green*/
     color: #16a085;
 }
   
-.midnight {
+.color5 { /*midnight*/
     color: #2c3e50;
 }
 
@@ -598,7 +613,7 @@ h3{
     display: flex; 
     justify-content: center; 
     /*margin-top: 20%;*/
-    background-color: green;
+    background-color: rgba(39, 44, 48, 0.562);
     padding: 10px;
     border-radius: 20px;
 }
@@ -660,7 +675,7 @@ input[type=button]:active{
     box-shadow: 0px 0px 0px rgba(0,0,0,0.2);
     left:0px;
 }
-#randomseed{
+#mc_seed{
     margin:0;
 }
 canvas{
@@ -980,7 +995,6 @@ canvas{
     .footerTop > p{
         width: 35ch;
         
-        /*Filip tester ting*/
         display: table;
         width: fit-content;
     }
@@ -992,7 +1006,6 @@ canvas{
     .footerTop > p > a{
         font-size: 13px;
 
-        /*Filip tester ting*/
         display: table;
         width: fit-content;
     }
@@ -1008,14 +1021,7 @@ canvas{
     from {width:0%}
     to {width:50%}
 }
-.javascriptCool{
-    left: 35%;
-}
-/*
-.maze{
-    margin: 20px auto 0 auto;
-}
-*/
+
 /* FUN PAGE END //////////*/
 }
 /* MEDIA QUERY END        600px     //////////////////////*/
@@ -1031,7 +1037,7 @@ canvas{
     
 
 
-    /* NAV BAR START //////////////////////*/
+/* NAV BAR START //////////////////////*/
 
 /* NAV BAR END //////////////////////*/
     
@@ -1070,7 +1076,6 @@ canvas{
     
         margin: 0.2% 10% 0 10%;
         justify-content: center;
-        
     }
 
     .pRef{
@@ -1280,3 +1285,61 @@ canvas{
 }
 
 /* MEDIA QUERY END //////////////////////*/
+
+/* MEDIA QUERY JS TEXT /////////////////*/
+
+/*
+@media only screen and (max-width: 1400px){
+    .javascriptCool{
+        left: 20%;
+    }
+}
+
+@media only screen and (max-width: 1300px){
+    .javascriptCool{
+        left: 20%;
+    }
+}
+@media only screen and (max-width: 1200px){
+    .javascriptCool{
+        left: 20%;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .javascriptCool{
+        left: 40%;
+    }
+}
+@media only screen and (max-width: 1000px){
+    .javascriptCool{
+        left: 40%;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .javascriptCool{
+        left: 40%;
+    }
+}
+@media only screen and (max-width: 800px){
+    .javascriptCool{
+        left: 40%;
+    }
+}
+@media only screen and (max-width: 700px){
+    .javascriptCool{
+        left: 30%;
+    }
+}
+/*
+@media only screen and (max-width: 600px){
+    .javascriptCool{
+        left: 30%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .javascriptCool{
+        left: 30%;
+    }
+}
+*/

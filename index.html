@@ -13,7 +13,8 @@
         <!-- Href to other pages, top, horizontal-->
 
             <!-- LOGO -->
-            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png"></img></a></div>
+            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png" alt="The OsloMet logo"></img></a></div>
+            <!-- 'navL' is the list of links to the different websites navL = nav list -->
             <div class="navL">
                 <ul>
                     <li><a href="index.html">Home</a></li>          
@@ -25,18 +26,20 @@
             </div>
     </div>
 
+    <!-- This is the title of the website -->
     <div class = "header">
-        <h1 id="Welcome">Welcome</h1> <!--Tenker at denne teksten skal stå oppå bildet(?)-->
+        <h1>Welcome</h1> 
     </div>
 
     <a class="skip-to-content" href="#content-start-index">Skip to content</a>
-    
-    <div class = "mainBody">
-        <!--Welcome! (index.html): this page should be a general information page 
-        that helps the visitor understand what this site is, and navigate to the 
-        other pages. May be short and simple. Common theme for site: Being a 
-        first-year student (at OsloMet). -->
 
+    <!-- We use divs only to make flex-box easier to use.
+         With that we have the flexibility of a div and 
+         the same functionality as semantic tags among other things. -->
+    <!-- This is the body. -->
+    <div class = "mainBody">
+
+        <!-- We use the id to specify that this paragraph should have capitalization of the first letter -->
         <div id="content-start-index" class="mainIntro">
             <p class="pIndex">Hey! We are a group of three students having just finished our first semester of our attendance in OsloMet.
                 We have managed to do a lot these past few months and we are excited to share some of it with you.
@@ -46,9 +49,11 @@
         </div>
 
         <div class="mainRef">
+            <!-- L stands for left, so the image should be on the left side -->
             <div class="mainImgL">
                 <img src="assets/girl_sitting_in_a_room.png" alt="A girl sitting a room with a book while looking up">
             </div>
+            <!-- R stands for right, so the text should be on the right side -->
             <div class="mainContentR">
                 <h2 class="h2Link"><a href="ref_essay.html">Reflection</a></h2>
                 <p class="pIndex">Want to know our story through our first semester at OsloMet? Check out our reflection essay! Here we reflect on how our first 
@@ -58,6 +63,7 @@
         </div>
 
         <div class="mainAcc">
+            <!-- when it doesn't say 'mainImgL' it should be placed to the right by default -->
             <div class="mainImg">
                 <img src="assets/accessability_img.png" alt="Picture of a button for accessability">
             </div>
@@ -80,7 +86,7 @@
 
         <div class="mainFun">
             <div class="mainImgR">
-                <img src="assets/javascript.png" alt="The javascript logo">
+                <img src="assets/javascript.png" alt="A screen with javascript code">
             </div>
             <div class="mainContentL">
                 <h2 class="h2Link"> <a href="fun_page.html">Fun Page</a></h2>
@@ -88,11 +94,10 @@
             </div>    
         </div>
 
-
     </div>
 
     <button onclick="toTheTop()" id="ToTheTop">
-        <img src="assets/uparrow.png" width="20"></img>
+        <img src="assets/uparrow.png" width="20" alt="An arrow pointing upwards"></img>
     </button>
     
 </body>

@@ -11,10 +11,9 @@
 <body>
 
     <div class = "nav">
-        <!-- Href to other pages, top, horizontal-->
 
             <!-- LOGO -->
-            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png"></img></a></div>
+            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png" alt="The OsloMet logo"></img></a></div>
             <div class="navL">
                 <ul>
                     <li><a href="index.html">Home</a></li>          
@@ -26,27 +25,14 @@
             </div>
     </div>
 
+    <!-- This is the title of the website -->
     <div class = "header">
-        <h1 id="Accessibility">Accessibility</h1><!--Tenker at dette skal stå oppå bildet(?)-->
+        <h1>Accessibility</h1>
     </div>
     <a class="skip-to-content" href="#content-start-accessibility">Skip to content</a>
     
     
     <div id="content-start-accessibility" class = "mainBody">
-
-        <!-- Accessibility page: It must contain a short presentation of accessibility
-        (up to 500 words describing how the group tested the code for 
-        accessibility using an automated test. Also explain how you checked, 
-        validated, and made coding-choices for universal design beyond what an 
-        automated test can do. You are welcome to use screenshots from the 
-        testing site and of your code. We shall read this text! While the content of 
-        your page is but a minor part of the assessment, this is the text that we 
-        are certain to read. (Grammar not important.)-->
-
-        <!-- Current: Column based content with row, row-divided content instead?-->
-        <!-- we can try row-divided content to see how it looks like :) -->
-
-
         <div class="accContent">
             <h2 class="h2Acc">The process</h2>
             <p class="pAcc">In the beginning we just wanted a basic layout for our website. 
@@ -54,7 +40,6 @@
                 We chose to use a default font to ensure that every website would have the same font, thus keeping the style consistent between browsers.
                 We purposely sat the max-width of any paragraph to 70 characters, which again is a basic setting. 
                 We made “back to top” button so it would be physically difficult or physically draining for people so it to instantly scroll to the top. 
-                It also saves the people time instead of scrolling all the way to the top. 
                 The navigation bar was made with intention for it to be easy for the user to navigate through out the pages. 
                 The first navigation bar was made for it to be easily seen with big bubbles and big text, but in the end looked. 
                 It was later decided that the navigation bar should look nice and be easily used. 
@@ -63,35 +48,54 @@
                 We are also taking care of the users that are colorblind. 
                 The test we ran gave us websites that look good and usable for the colorblind users in all the categories like “Protanopia”, “Deutanopia”, “Tritanopia and “Achromatopsia”. 
                 This does not only include text, but the pictures are also good to look at. </p>
+                
                 <div class = "images">
-                <img src="assets/contrast_checker.png" alt="a test that checkes the contrast between different colors">
+                    <img src="assets/contrast_checker.png" alt="a test that checkes the contrast between different colors">
                 </div>
+
+                <div class = "images">
+                    <img src="assets/color-blind-test.png" alt="A picture that shows this website with and without colorblindness">
+                </div>
+
                 <p class="pAcc">
-                We used “media screen” in css to make it accessible for people with either a smaller screen or on a phone and a tablet. 
-                This makes it better for our site to reach a broader audience and to make it useable for people who either has a smaller screen or a big one. 
-                The use of “id” in the different “div” boxes are for people who use screen readers to make them also able to communicate with the website since screen readers use “id” and not “class”.
+                    We used “media screen” in css to make it accessible for people with either a smaller screen or on a phone and a tablet. 
+                    This makes it better for our site to reach a broader audience and to make it useable for people who either has a smaller screen or a big one. 
+                    The use of “id” in the different “div” boxes are for people who use screen readers to make them also able to communicate with the website since screen readers use “id” and not “class”.
+                    <br>
+                    In addition, we also added a “skip to content” internal link so that people who uses screen readers can jump past the nav-bar and straight to the contents of the website. 
+                    This clickable link is hidden away outside of the viewport since it a pointless property for those who doesn’t use screen readers.
                 </p>
-                <!--
-                * To the top (no physical effort)
 
-                * Nav bar (hvorfor er den slik den er: Stort nok til å trykke på, og lett å se)
+                <div class="images">
+                    <img src="assets/skip-to-content-screenshot.PNG" alt="A screenshot of HTML code showcasing skip-to-content-button">
+                </div>
 
-                *index.html (hvorfor tok vi bildene sikksakk?)
+                <p class="pAcc">
+                    Finally, we did a website check to see if we missed out on any essential code. 
+                    From the website <a href="https://achecker.achecks.ca/checker/index.php">achecker.ca</a> we got informed that two of the pictures used on the website didn’t have alt-tags. 
+                    This was an oversight we would not have discovered if it wasn’t for the website checker.
+                </p>
 
-                *farger (hvorfor brukte vi de fargene vi brukte)
-                -->
+                <div class="images">
+                    <img src="assets/missing-alt-attribute-screenshot.PNG" alt="A screenshot of results showing that we missed some alt tags after checking website on achecker.ca">
+                </div>
+
+                <p class="pAcc">
+                    We also got a recommendation that some of the alt texts were unrelated to the picture in question. 
+                    This mistake happened because we originally had a different picture instead of the current one. 
+                    So, when we switched image, we forgot to change the alt text to be more corresponding.
+                </p>
+
+                <div class="images">
+                    <img src="assets/wrong-alt-tag-screenshot.PNG" alt="A screenshot of results showing that the wrong alt text is written">
+                </div>
             </p>
         </div>
 
     </div>
 
     <button onclick="toTheTop()" id="ToTheTop">
-        <img src="assets/uparrow.png" width="20"></img>
+        <img src="assets/uparrow.png" width="20" alt="An arrow pointing upwards"></img>
     </button>
-
-    <div class = "footer">
-        <!-- Trenger vi dette?-->
-
-    </div>
 </body>
 </html>

@@ -15,7 +15,7 @@
         <!-- Href to other pages, top, horizontal-->
 
             <!-- LOGO -->
-            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png"></img></a></div>
+            <div class="navLE"><a href="index.html"><img src="assets/oslomet_logo.png" alt="The OsloMet logo"   ></img></a></div>
             <div class="navL">
                 <ul>
                     <li><a href="index.html">Home</a></li>          
@@ -28,9 +28,9 @@
     </div>
 
     
-
+    <!-- This is the title of the website -->
     <div class = "header">
-        <h1 id="funTitle">Fun Page </h1><!--Tenker at dette skal stå oppå bildet(?)-->
+        <h1 id="funTitle">Fun Page </h1>
     </div>
     
     <a class="skip-to-content" href="#content-start-fun">Skip to content</a>
@@ -38,20 +38,6 @@
     
     <div id="content-start-fun" class = "funBody">
 
-        <!--Fun page: Make one page that is in a different layout and have a 
-        different styling than the others. Put in some text and images. We accept 
-        place-holder text, but don’t use copyrighted images. Or you can present 
-        an activity or a place in Oslo. This page is an opportunity to be creative 
-        and shine. You may embed video or sound, but again: beware of 
-        copyright, please! Don’t forget to consider the size of the media files 
-        (videos or pictures). -->
-
-    </div>
-    <div class="mazeP">
-        <br>
-        <p>BGM can be turned off within the white space.</p>
-        <p>Have fun while exploring for the button.</p>
-        
     </div>
     <!-- COLUMN -->
     <div class="funPageContent">
@@ -63,114 +49,134 @@
                 </div>
                 <div class="inputRight">
                     <ul>
-                        <li><label>Width:</label><input id=width type="text"/></li>
-                        <li><label>Height:</label><input id=height type="text"/></li>
-                        <li><label>Path Width:</label><input id=pathwidth type="text"/></li>
-                        <li><label>Wall Width:</label><input id=wallwidth type="text"/></li>
-                        <li><label>Outer Width:</label><input id=outerwidth type="text"/></li>
-                        <li><label>Path Color:</label><input id=pathcolor type="text"/></li>
-                        <li><label>Wall Color:</label><input id=wallcolor type="text"/></li>
-                        <li><label>Seed:</label><input id=seed type="text"/></li>
-                        <li><input id=randomseed type="button" value="Random Seed"/></li>
+                        <li><label>Width:</label><input id="width" type="text"/></li>
+                        <li><label>Height:</label><input id="height" type="text"/></li>
+                        <li><label>Path Width:</label><input id="pathwidth" type="text"/></li>
+                        <li><label>Wall Width:</label><input id="wallwidth" type="text"/></li>
+                        <li><label>Outer Width:</label><input id="outerwidth" type="text"/></li>
+                        <li><label>Path Color:</label><input id="pathcolor" type="text"/></li>
+                        <li><label>Wall Color:</label><input id="wallcolor" type="text"/></li>
+                        <li><label>Seed:</label><input id="seed" type="text"/></li>
+                        <li><input id="mc_seed" type="button" value="Random Seed"/></li>
                     </ul>
                 </div>
             </div>
         </div>
 
-        <div class="javascriptCool">
+        <div class="javascriptCool" id="resize">
             <p class="javascriptCoolP">&nbsp;&nbsp;Javascript is&nbsp;</p>
-            <span class="randomizer wisteria">beautiful.</span>
-            <span class="randomizer midnight">powerful.</span>
-            <span class="randomizer belize">divine.</span>
-            <span class="randomizer pomegranate">fancy.</span>
-            <span class="randomizer green">elegant.</span>
-            <span class="randomizer belize">rich.</span>
-            <span class="randomizer wisteria">smart.</span>
-            <span class="randomizer midnight">free.</span>
-            <span class="randomizer pomegranate">love.</span>
-            <span class="randomizer green">tiring.</span>
-            <span class="randomizer belize">complicated.</span>
-            <span class="randomizer wisteria">a_pain.</span>
-            <span class="randomizer pomegranate">cool.</span>
-            <span class="randomizer green">a_hit.</span>
-            <span class="randomizer midnight">js.</span>
+            <span class="randomizer color1">crazy!</span>
+            <span class="randomizer color5">ez.</span>
+            <span class="randomizer color2">a_crusade.</span>
+            <span class="randomizer color3">smooth.</span>
+            <span class="randomizer color4">elegant.</span>
+            <span class="randomizer color2">colorful.</span>
+            <span class="randomizer color1">smart.</span>
+            <span class="randomizer color5">loyal.</span>
+            <span class="randomizer color3">free.</span>
+            <span class="randomizer color4">tiring.</span>
+            <span class="randomizer color2">complicated.</span>
+            <span class="randomizer color1">a_pain.</span>
+            <span class="randomizer color3">cool...</span>
+            <span class="randomizer color4">a_hit...</span>
+            <span class="randomizer color5">js.</span>
         </div>
 
     </div>
     
-    <div class = "footer">
-        <!-- Trenger vi dette? Nå ja-->
-        <embed src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" autostart="true" loop="false" height="0">
+    <audio id="sound" autoplay loop>
+        <source src="assets/Evan_King_-_Milkman_Karlson_Theme_-_01_Milkman_Karlson_Theme.mp3" type="audio/mpeg">
+    </audio>
             <!-- 'Height="0"' used to hide the audio controls-->
-    </div>
-
     <script>
-        /*alert("Audio Warning")*/
+
+        /* Javascript Mobile Check, warning does not come upon resize as it would
+           give the warning for every resize that occurs within the given value
+        */
+       
         window.onload = function(event){
             if ((window.innerWidth < 800)){
                 alert("Warning, avoid big numbers when using the Maze on mobile.")
             };
         }
+
+        var answer = window.confirm("Do you want to start background music?");
+        if(answer==true){
+            var audioS = document.getElementById("sound");
+            audioS.play();
+        }else{
+            var audioP = document.getElementById("sound");
+            audioP.pause();
+        }
+
         /* Javascript Random Word*/
 
+        /* This code was made at Foss VGS by one of the students within this group.
+           Upon creating this code, there would most likely be help from the teacher/web
+        */
 
-        var words = document.getElementsByClassName('randomizer');
-        var wordArray = [];
-        var currentWord = 0;
+        var words = document.getElementsByClassName("randomizer");
+        var wordArr = [];
+        var wordNow = 0;
 
-        words[currentWord].style.opacity = 1;
+        words[wordNow].style.opacity = 1;
         for (var i = 0; i < words.length; i++) {
-            splitLetters(words[i]);
+            wordLocation(words[i]);
         }
 
-        function changeWord() {
-            var cw = wordArray[currentWord];
-            var nw = currentWord == words.length - 1 ? wordArray[0] : wordArray[currentWord + 1];
-            for (var i = 0; i < cw.length; i++) {
-            animateLetterOut(cw, i);
+        function wordTrade() {
+            var wN = wordArr[wordNow];
+            var abc = wordNow == words.length - 1 ? wordArr[0] : wordArr[wordNow + 1];
+            for (var i = 0; i < wN.length; i++) {
+            wordDrop(wN, i);
         }
 
-        for (var i = 0; i < nw.length; i++) {
-            nw[i].className = 'letter behind';
-            nw[0].parentElement.style.opacity = 1;
-            animateLetterIn(nw, i);
+        for (var i = 0; i < abc.length; i++) {
+            abc[i].className = "letter behind";
+            abc[0].parentElement.style.opacity = 1;
+            wordIn(abc, i);
         }
 
-        currentWord = currentWord == wordArray.length - 1 ? 0 : currentWord + 1;
+        wordNow = wordNow == wordArr.length - 1 ? 0 : wordNow + 1;
         }
 
-        function animateLetterOut(cw, i) {
+        function wordDrop(wN, i) {
             setTimeout(function () {
-            cw[i].className = 'letter out';
+            wN[i].className = "letter out";
             }, i * 80);
         }
 
-        function animateLetterIn(nw, i) {
+        function wordIn(abc, i) {
             setTimeout(function () {
-            nw[i].className = 'letter in';
+            abc[i].className = "letter in";
             }, 340 + i * 80);
         }
 
-        function splitLetters(word) {
+        function wordLocation(word) {
             var content = word.innerHTML;
-            word.innerHTML = '';
+            word.innerHTML = "";
             var letters = [];
             for (var i = 0; i < content.length; i++) {
-            var letter = document.createElement('span');
-            letter.className = 'letter';
+            var letter = document.createElement("span");
+            letter.className = "letter";
             letter.innerHTML = content.charAt(i);
             word.appendChild(letter);
             letters.push(letter);
         }
 
-        wordArray.push(letters);
+        wordArr.push(letters);
         }
 
-        changeWord();
-        setInterval(changeWord, 4000);
+        wordTrade();
+        setInterval(wordTrade, 4000);
 
 
         /* MAZE */
+
+        /* This code was made at Foss VGS by one of the students within this group.
+           Upon creating this code, there would most likely be help from the teacher/web
+           including the corrections that were made after recieving the "løsningsforslag"
+        */
 
         pathWidth = 20       //PathBredde
         wall = 2             //WallBredde
@@ -181,10 +187,10 @@
         x = width/2|0        //Horisontal start
         y = height/2|0       //Vertikal start
         seed = Math.random()*100000|0//MinecraftSeed
-        wallColor = '#d24'   //WallColor
-        pathColor = '#222a33'//PathColor
+        wallColor = "#1b738d"   //WallColor
+        pathColor = "#fbb51d"//PathColor
 
-        randomGen = function(seed){
+        mc_seedGen = function(seed){
             if(seed===undefined)var seed=performance.now()
             return function(){
             seed = (seed * 9301 + 49297) % 233280
@@ -195,13 +201,13 @@
         init = function(){
             offset = pathWidth/2+outerWall
             map = []
-            canvas = document.querySelector('canvas')
+            canvas = document.querySelector("canvas")
             ctx = canvas.getContext('2d')
             canvas.width = outerWall*2+width*(pathWidth+wall)-wall
             canvas.height = outerWall*2+height*(pathWidth+wall)-wall
             ctx.fillStyle = wallColor
             ctx.fillRect(0,0,canvas.width,canvas.height)
-            random = randomGen(seed)
+            random = mc_seedGen(seed)
             ctx.strokeStyle = pathColor
             ctx.lineCap = 'square'
             ctx.lineWidth = pathWidth
@@ -218,16 +224,15 @@
                 y*(pathWidth+wall)+offset)
         }
         init()
-
-            inputWidth = document.getElementById('width')
-            inputHeight = document.getElementById('height')
-            inputPathWidth = document.getElementById('pathwidth')
-            inputWallWidth = document.getElementById('wallwidth')
-            inputOuterWidth = document.getElementById('outerwidth')
-            inputPathColor = document.getElementById('pathcolor')
-            inputWallColor = document.getElementById('wallcolor')
-            inputSeed = document.getElementById('seed')
-            buttonRandomSeed = document.getElementById('randomseed')
+            inputWidth = document.getElementById("width")
+            inputHeight = document.getElementById("height")
+            inputPathWidth = document.getElementById("pathwidth")
+            inputWallWidth = document.getElementById("wallwidth")
+            inputOuterWidth = document.getElementById("outerwidth")
+            inputPathColor = document.getElementById("pathcolor")
+            inputWallColor = document.getElementById("wallcolor")
+            inputSeed = document.getElementById("seed")
+            buttonMCseed = document.getElementById("mc_seed")
 
         settings = {
             display: function(){
@@ -253,25 +258,27 @@
                     }
             },
             update: function(){
-            clearTimeout(timer)
-            width = parseFloat(inputWidth.value)
-            height = parseFloat(inputHeight.value)
-            pathWidth = parseFloat(inputPathWidth.value)
-            wall = parseFloat(inputWallWidth.value)
-            outerWall = parseFloat(inputOuterWidth.value)
-            pathColor = inputPathColor.value
-            wallColor = inputWallColor.value
-            seed = parseFloat(inputSeed.value)
-            x = width/2|0
-            y = height/2|0
-            init()
-            loop()
+                clearTimeout(timer)
+                width = parseFloat(inputWidth.value)
+                height = parseFloat(inputHeight.value)
+                pathWidth = parseFloat(inputPathWidth.value)
+                wall = parseFloat(inputWallWidth.value)
+                outerWall = parseFloat(inputOuterWidth.value)
+                pathColor = inputPathColor.value
+                wallColor = inputWallColor.value
+                seed = parseFloat(inputSeed.value)
+                x = width/2|0
+                y = height/2|0
+                init()
+                loop()
             }
         }
 
-        buttonRandomSeed.addEventListener('click',function(){
+        buttonMCseed.addEventListener("click",function(){
             inputSeed.value = Math.random()*100000|0
         })
+
+
 
         loop = function(){
             x = route[route.length-1][0]|0
@@ -297,20 +304,17 @@
                 return;
             }
             direction = alternatives[random()*alternatives.length|0]
-            route.push([direction[0]+x,direction[1]+y])
-            ctx.lineTo((direction[0]+x)*(pathWidth+wall)+offset,
+                route.push([direction[0]+x,direction[1]+y])
+                ctx.lineTo((direction[0]+x)*(pathWidth+wall)+offset,
                 (direction[1]+y)*(pathWidth+wall)+offset)
-            map[(direction[1]+y)*2][(direction[0]+x)*2] = true
-            map[direction[1]+y*2][direction[0]+x*2] = true
-            ctx.stroke()
-            timer = setTimeout(loop,delay)
+                map[(direction[1]+y)*2][(direction[0]+x)*2] = true
+                map[direction[1]+y*2][direction[0]+x*2] = true
+                ctx.stroke()
+                timer = setTimeout(loop,delay)
             }
             settings.display()
             loop()
             setInterval(settings.check,400)
-
-            
-
     </script>
 </body>
 </html>
