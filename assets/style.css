@@ -502,8 +502,8 @@ h3{
 .javascriptCool{
     font-size: 20px;
     position: absolute;
-    width: 450px;
-    left: 20%;
+    width: 250px;
+    left: 40%;
     /*margin:-20px 0 150px -225px;*/
     height: 40px;
     /*top: 50%;*/
@@ -520,7 +520,7 @@ h3{
 .randomizer {
     position: absolute;
     top: 0px;
-    width: 220px;
+    width: 10ch;
     opacity: 0;
 }
   
@@ -1008,6 +1008,9 @@ canvas{
     from {width:0%}
     to {width:50%}
 }
+.javascriptCool{
+    left: 35%;
+}
 /*
 .maze{
     margin: 20px auto 0 auto;
@@ -1144,6 +1147,9 @@ canvas{
 /*.maze{
     margin: 40px auto 0 auto;
 }*/
+.javascriptCool{
+    left: 35%;
+}
 /*Fun page content end*/
 
 
