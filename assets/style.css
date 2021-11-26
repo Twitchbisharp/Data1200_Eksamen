@@ -460,6 +460,9 @@ h3{
     border-radius: 20px;
 }
 
+.footerTop > p{
+    width: 95ch;
+}
 
 .footerTop > p > a:link{
     color: #2AD09A;
