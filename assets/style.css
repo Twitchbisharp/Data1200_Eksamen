@@ -696,6 +696,7 @@ canvas{
         }
 
         /* NAV BAR START //////////////////////*/
+       /*
         ul{
             list-style-type: none;
             margin: 0.2% 10% 0;
@@ -703,16 +704,25 @@ canvas{
             border-radius: 20px;
         }
         li{
-            font-size: 15px;
+            font-size: 12px;
             display: inline-block;
         }
         li a{
             color: black;
-            padding: 0.75em;
+            padding: 0.75em 0.75em 4em 0;
             
         
             border-radius: 10px;
         }
+        */
+        .navL > ul > li a{
+            font-size: 12px;
+
+        }
+        .navL > ul > li > a{
+            padding: 5px 15px 5px 0;
+        }
+
         /* NAV BAR END //////////////////////*/
 
         /* INDEX PAGE START /////////*/
