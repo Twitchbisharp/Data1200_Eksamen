@@ -948,6 +948,10 @@ canvas{
          
     }
 
+    .footerTop > p{
+        width: 65ch;
+    }
+
 /* Topical Page Content END //////////////////////*/
 
 /* FUN PAGE START /////////*/
